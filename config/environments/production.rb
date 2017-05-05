@@ -38,7 +38,7 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
-
+  config.secret_key_base = '4bc1eb06fd6bcabb85b9a42b1b861d7446e4bb41363e9fce84be8f18e8c9cd7e78bf0fee99e654f1ee38fefddeba282ad262d525c82a879a92387d19722bfc29'
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
