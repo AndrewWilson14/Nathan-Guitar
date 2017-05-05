@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @page_title %></title>
+
+    <META name="keywords" content="Nathan Nate Turley Guitar Lessons Tutorial"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
+
+    <%= favicon_link_tag 'favicon.ico' %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="logo"><%= link_to image_tag("Nathan Guitar Logo-full-white-blue.png"), root_path %>
+          </li>
+          <li class="nav-item"><%= link_to "COURSES", courses_path %>
+          </li>
+          <li class="nav-item"><%= link_to "LIBRARY", library_path %>
+          </li>
+          <li class="nav-item"><%= link_to "PLAY ALONG", play_along_path %>
+          </li>
+          <li class="nav-item"><%= link_to "CONTACT", contact_path %>
+          </li>
+          <%= link_to '<li class="nav-item fa fa-shopping-cart cart" aria-hidden="true"></li>'.html_safe, cart_path %>
+          
+          <!-- <li class="nav-item"><%= link_to "Sign Up", root_path %>
+          </li>
+          <li class="nav-item"><%= link_to "Log In", root_path %>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+    <div class="footer">
+      <div class="footer-top">
+        <i class="fa fa-youtube" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </div>
+      <div class="footer-bottom">
+      <p>This is the copywrite area</p>
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <i class="fa fa-question-circle" aria-hidden="true"></i>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </div>
+    </div>
+
+  </body>
+</html>
